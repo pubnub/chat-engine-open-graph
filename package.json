@@ -1,0 +1,23 @@
+{
+  "name": "chat-engine-open-graph",
+  "version": "0.0.1",
+  "main": "src/plugin.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pubnub/chat-engine-open-graph.git"
+  },
+  "keywords": [
+    "pubnub",
+    "chat-engine",
+    "open-graph",
+    "realtime"
+  ],
+  "author": "Manuel Fernando",
+  "bugs": {
+    "url": "https://github.com/pubnub/chat-engine-open-graph/issues"
+  },
+  "homepage": "https://github.com/pubnub/chat-engine-open-graph#readme",
+  "dependencies": {
+    "superagent": "^3.8.2"
+  }
+}
