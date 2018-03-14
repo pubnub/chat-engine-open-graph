@@ -1,7 +1,7 @@
 # Open Graph Plugin for Chat Engine
 
-Adds the ability to identify if a message contains a URL, fetch it with your server or an external service 
-and get metadata to transform a plain message into a thumbnail.
+Identify if **message.data.text** contains an URL, send it to your server or a third party service and get the data 
+collected into **message.data.metadata** which you can use in order to transform a plain message in a thumbnail.
 
 ### Quick Start
 
@@ -22,7 +22,7 @@ ChatEngine.connect('Username');
 ChatEngine.on('$ready', () = { ... });
 ```
 
-2. Install the server for fetching and read the **<meta>** tags for facebook open-graph and twitter cards
+2. Install the server for fetching and read the meta tags for facebook open-graph and twitter cards
 
 ```js
 const express = require('express');
