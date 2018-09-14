@@ -13,7 +13,6 @@ module.exports = (config) => {
             request(api(encodeURI(r[0])), 'GET', {
               'Access-Control-Allow-Origin': '*'
             }).then((res) => {
-              console.log(res);
                 payload.data.text = payload.data.text.replace(regex, '');
                 payload.data.metadata = res.body;
             }).catch((error) => {
