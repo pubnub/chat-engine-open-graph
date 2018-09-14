@@ -10,11 +10,11 @@ module.exports = (config) => {
         message: function (payload, next) {
           let r = payload.data.text.match(regex);
           if (r && r.length > 0) {
-            request(api(encodeURI(r[0])), 'GET', {
+            request(api(r[0]), 'GET', {
               'Access-Control-Allow-Origin': '*'
             }).then((res) => {
                 payload.data.text = payload.data.text.replace(regex, '');
-                payload.data.metadata = res.body;
+                payload.data.metadata = res.hybridGraph;
             }).catch((error) => {
               // console.error(error);
             });
