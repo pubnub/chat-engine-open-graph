@@ -1,6 +1,6 @@
 {
   "name": "chat-engine-open-graph",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/plugin.js",
   "repository": {
     "type": "git",
@@ -17,7 +17,23 @@
     "url": "https://github.com/pubnub/chat-engine-open-graph/issues"
   },
   "homepage": "https://github.com/pubnub/chat-engine-open-graph#readme",
-  "dependencies": {
-    "superagent": "^3.8.2"
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "minify"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-minify": "^0.4.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0"
   }
 }
