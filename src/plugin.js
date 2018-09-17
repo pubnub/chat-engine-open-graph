@@ -11,17 +11,28 @@ module.exports = (config) => {
             let r = payload.data.text.match(regex);
             if (r && r.length > 0) {
               const data = await fetch(api(r[0])).then((response) => {
-                return response.json();
-              });
-              payload.data.text = payload.data.text.replace(regex, '');
-              payload.data.img = data.hybridGraph.image;
-              payload.data.url = data.hybridGraph.url;
-              payload.data.title = data.hybridGraph.title;
-              payload.data.desc = data.hybridGraph.description;
+                  if(response.ok) {
+                      return response.json();
+                  } else {
+                      return Promise.reject({
+                          status: response.status,
+                          statusText: response.statusText
+                        })
+                  }
+              }).catch((error)=>{ console.log("Error: ", error) });
+  
+              if(data.hybridGraph != null){
+                  payload.data.text = payload.data.text.replace(regex, '');
+                  payload.data.img = data.hybridGraph.image;
+                  payload.data.url = data.hybridGraph.url;
+                  payload.data.title = data.hybridGraph.title;
+                  payload.data.desc = data.hybridGraph.description;
+              }
             }
             next(null, payload);
           }
         }
       }
     }
-}
+  }
+  
