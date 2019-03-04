@@ -44,3 +44,7 @@ const opengraph = require('chat-engine-open-graph');
 
 ChatEngine.global.plugin(opengraph({ api: (url) => `https://opengraph.io/api/1.1/site/${encodeURI(url)}?app_id=${apiKey}` }));
 ```
+
+## Support
+
+- If you **need help**, have a **general question** a **feature request** or to file a **bug**, contact <support@pubnub.com>
