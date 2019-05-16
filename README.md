@@ -1,3 +1,8 @@
+This repository is a part of the [ChatEngine Framework](https://github.com/pubnub/chat-engine).
+For more information on building chat applications with PubNub, see our
+[Chat Resource Center](http://www.pubnub.com/developers/chat-resource-center/).
+
+
 # Open Graph Plugin for Chat Engine
 
 Identify if **message.data.text** contains an URL, send it to your server or a third party service and get the data 
@@ -47,4 +52,4 @@ ChatEngine.global.plugin(opengraph({ api: (url) => `https://opengraph.io/api/1.1
 
 ## Support
 
-- If you **need help**, have a **general question** a **feature request** or to file a **bug**, contact <support@pubnub.com>
+- If you **need help**, have a **general question**, have a **feature request** or to file a **bug**, contact <support@pubnub.com>.
