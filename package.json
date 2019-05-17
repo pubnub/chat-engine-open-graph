@@ -1,6 +1,7 @@
 {
   "name": "chat-engine-open-graph",
   "version": "0.0.4",
+  "license": "SEE LICENSE IN LICENSE",
   "main": "src/plugin.js",
   "repository": {
     "type": "git",
